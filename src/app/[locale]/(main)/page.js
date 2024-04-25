@@ -5,17 +5,22 @@ import Pse from "@/components/home/Pse";
 import Services from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonials";
 import Theme from "@/components/home/Theme";
-import Register from "@/components/home/Register";
 import Work from "@/components/home/Work";
+import Register from "@/components/home/Register";
+
 import RegisterMiddle from "@/components/home/RegisterMiddle";
 
 export const metadata = {
+
   title: {
     absolute: "eBitans - E-Commerce Website Builder in Bangladesh"
   },
 };
 
-// 
+
+//askdais its sadsdasssssd ssds
+
+
 const Home = async ({ params: { locale } }) => {
   return (
     <main className="">
@@ -28,6 +33,7 @@ const Home = async ({ params: { locale } }) => {
       <Testimonials />
       <Pse />
       <Work />
+
       <Register />
     </main>
   );

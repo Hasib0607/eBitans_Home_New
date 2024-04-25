@@ -39,6 +39,10 @@ const FlashSale = ({ item, flashSale, ip }) => {
                                 slidesPerView: 4,
                                 spaceBetween: 20,
                             },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 20,
+                            },
                             1440: {
                                 slidesPerView: 6,
                                 spaceBetween: 20,

@@ -66,7 +66,7 @@ const Footer = ({ locale }) => {
             </div >
             <div className='relative bg-[#000] py-3 mt-10 z-[1]'>
                 < div className='grid grid-cols-1 justify-start pl-4'>
-                    <span className="text-sm text-[#f1593a] sm:text-center">© {date} <a href="https://ebitans.com" className='font-bold'>eBitans Ltd.</a> | All Rights Reserved | Design & Developed By <a href="https://ebitans.com" className='font-bold'>eBitans LTD.</a> </span>
+                    <span className="text-sm text-[#f1593a] sm:text-center">© {date} All Rights Reserved | Design & Developed By <a href="https://ebitans.com" className='font-bold'>eBitans Ltd. |</a> <a>Made In BANGLADESH</a> </span>
                 </div>
             </div>
         </footer >

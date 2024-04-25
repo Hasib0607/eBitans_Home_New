@@ -15,7 +15,7 @@ const PseCatProduct = ({ category, ip }) => {
     const [ebitansRecommend, setEbitansRecommend] = useState([]);
     const [topSelling, setTopSelling] = useState([]);
     const [offerDeal, setOfferDeal] = useState([]);
-    // const [flashSale, setFlashSale] = useState([]);
+    const [flashSale, setFlashSale] = useState([]);
     const [topPick, setTopPick] = useState([]);
 
     useEffect(() => {
@@ -32,43 +32,41 @@ const PseCatProduct = ({ category, ip }) => {
     }, [ip])
 
     useEffect(() => {
-        const categorySlugs = category.filter(item => item.id === 28620 || item.id === 28621 || item.id === 28628).map(item => item.slug);
-        const categoryIds = category.filter(item => item.id === 28620 || item.id === 28621 || item.id === 28628).map(item => item.id);
+        const categorySlugs = category.filter(item => item.id === 28620 || item.id === 28621 || item.id === 28628 || item.id === 28621).map(item => item.slug);
         const categorySlug = category.filter(item => item.id === 28619 || item.id === 28622).map(item => item.slug);
-        const categoryId = category.filter(item => item.id === 28619 || item.id === 28622).map(item => item.id);
+        // const categorySlugs = ['feature-product', 'ebitans-recommended-product', 'offer-deal', 'flash-sale'];
+        // const category = ['new-store-1', 'top-selling-product'];
         const fetchDataSequentially = () => {
             for (const categorySlug of categorySlugs) {
-                fetch(`${baseUrl}/pse/products/product-by-category?slug=${categorySlug}`, { next: { revalidate: 10 } })
+                fetch(`${baseUrl}/pse/products/product-by-category?slug=${categorySlug}`)
                     .then(res => res.json())
                     .then((res) => {
-                        for (const catId of categoryIds) {
-                            if (catId === 28620) {
-                                setFeatureProducts(res?.results)
-                            }
-                            else if (catId === 28621) {
-                                setEbitansRecommend(res?.results)
-                            }
-                            else if (catId === 28628) {
-                                setOfferDeal(res?.results)
-                            }
+                        if (categorySlug === 'feature-product') {
+                            setFeatureProducts(res?.results)
                         }
-
+                        else if (categorySlug === 'ebitans-recommended-product') {
+                            setEbitansRecommend(res?.results)
+                        }
+                        else if (categorySlug === 'offer-deal') {
+                            setOfferDeal(res?.results)
+                        }
+                        else {
+                            setFlashSale(res?.results)
+                        }
                     })
                     .catch(err => {
                         console.log(err)
                     })
             }
             for (const categorySlugss of categorySlug) {
-                fetch(`${baseUrl}/pse/products/category?slug=${categorySlugss}`, { next: { revalidate: 10 } })
+                fetch(`${baseUrl}/pse/products/category?slug=${categorySlugss}`)
                     .then(res => res.json())
                     .then((res) => {
-                        for (const catId of categoryId) {
-                            if (catId === 28619) {
-                                setNewStore(res?.results)
-                            }
-                            else if (catId === 28622) {
-                                setTopSelling(res?.results)
-                            }
+                        if (categorySlugss === 'new-store-1') {
+                            setNewStore(res?.results)
+                        }
+                        else if (categorySlugss === 'top-selling-product') {
+                            setTopSelling(res?.results)
                         }
                     })
                     .catch(err => {
@@ -113,11 +111,11 @@ const PseCatProduct = ({ category, ip }) => {
                             <TopPick item={item} topPick={topPick} ip={ip} />
                         </Suspense>
                     }
-                    {/* {flashSale?.length > 0 &&
+                    {flashSale?.length > 0 &&
                         <Suspense fallback={<div className="py-1 text-xl text-gray-500">Loading</div>}>
                             <FlashSale item={item} flashSale={flashSale} ip={ip} />
                         </Suspense>
-                    } */}
+                    }
                 </div>
             )}
         </div>

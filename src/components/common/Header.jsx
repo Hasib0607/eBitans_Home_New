@@ -111,7 +111,7 @@ const Header = ({ locale }) => {
                                         <IoIosArrowDown className='hover:text-[#f1593a] duration-300 ' />
 
                                     </li>
-                                    {openSub && <div className='hidden lg:flex items-center gap-3 absolute -bottom-[95px] left-0 drop-shadow-md w-max border-x border-y border-y-[#26161234]  border-x-[#694F49] bg-white px-10'>
+                                    {openSub && <div className='hidden lg:flex items-center gap-3 absolute -bottom-[95px] -left-[120px] drop-shadow-md w-max border-x border-y border-y-[#26161234]  border-x-[#694F49] bg-white px-10'>
                                         {subMenu_solutions?.map((sub, id) =>
                                             <div key={id} className='px-5'>
                                                 <Link href={sub?.link} onClick={() => { setOpenSub(false); setOpen(false) }} className={`nav-link`}><li className={`${styles.archivo} ${(pathname === `/bn${sub?.link}` || pathname === `${sub?.link}`) ? 'active' : ''} py-5 list-disc`}>{locale === "en" ? sub?.name : sub?.nameBn}</li></Link>
@@ -132,7 +132,7 @@ const Header = ({ locale }) => {
                                         <IoIosArrowDown className='hover:text-[#f1593a] duration-300 ' />
                                     </li>
 
-                                    {open && <div className='hidden lg:flex items-center gap-3 absolute  -bottom-[95px] -left-20 drop-shadow-md w-max border-x border-y border-y-[#26161234]  border-x-[#694F49] bg-white px-10'>
+                                    {open && <div className='hidden lg:flex items-center gap-3 absolute  -bottom-[95px] -left-[190px] drop-shadow-md w-max border-x border-y border-y-[#26161234]  border-x-[#694F49] bg-white px-10'>
                                         {subMenu_resource?.map((sub, id) =>
                                             <div ref={dropdownRef} key={id} className='px-5'>
                                                 {sub?.name === "Video" ? <a href={sub?.link} target="_blank"><li className={`nav-link list-disc`}>{locale === "en" ? sub?.name : sub?.nameBn}</li></a> : <Link href={sub?.link} onClick={() => { setOpenSub(false); setOpen(false) }} className={`nav-link`}><li className={`${styles.archivo} ${(pathname === `/bn${sub?.link}` || pathname === `${sub?.link}`) ? 'active' : ''} py-5 list-disc`}>{locale === "en" ? sub?.name : sub?.nameBn}</li></Link>}

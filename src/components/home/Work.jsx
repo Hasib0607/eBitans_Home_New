@@ -14,8 +14,9 @@ const Work = () => {
             </div>
             <div className='relative z-[1] container px-5 lg:px-10 rounded-[10px] xl:-mt-24 lg:-mt-10 -mt-6'>
                 <div className='text-center'>
-                    <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Work with us</h2>
-                    <h4 className={`${styles.archivo} text-[12px] lg:text-[22px] font-normal lg:font-medium`}>They are connect with us</h4>
+                    <h4 className={`${styles.archivo} ${styles.paragraph} tracking-[5px] lg:tracking-[10px] text-base` }>They are connect with us</h4>
+                    <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Work With Us</h2>
+                   
                 </div>
             </div>
             <Marquee gradient={false} speed={30} className='mt-14'>

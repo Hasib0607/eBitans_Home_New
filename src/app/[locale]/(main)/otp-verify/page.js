@@ -18,7 +18,7 @@ const OtpVerify = () => {
     const [time, setTime] = useState(null);
     const [dis, setDis] = useState(null);
     const [isClient, setIsClient] = useState(false)
-    console.log(atob(otp), "otp");
+
     useEffect(() => {
         setIsClient(true)
     }, [])
@@ -47,7 +47,7 @@ const OtpVerify = () => {
 
     const onSubmit = (data) => {
         setLoading(true);
-        if (btoa(otp) === Number(data?.otp)) {
+        if (Number(atob(otp)) === Number(data?.otp)) {
             const registerData = {
                 name: user?.name ? user?.name : null,
                 email: user?.email ? user?.email : null,
@@ -85,8 +85,8 @@ const OtpVerify = () => {
                     setLoading(false)
                 });
         }
-        if (btoa(otp) !== Number(data?.otp)) {
-            toast("Credential Doesn't Match", { type: 'error' })
+        if (Number(atob(otp)) !== Number(data?.otp)) {
+            toast("OTP Doesn't Match", { type: 'error' })
             setLoading(false);
         }
     };

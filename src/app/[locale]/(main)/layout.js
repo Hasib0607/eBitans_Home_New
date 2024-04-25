@@ -8,5 +8,5 @@ const layout = ({ children, params: { locale } }) => {
         </>
     )
 }
-
+//asdsd
 export default layout
