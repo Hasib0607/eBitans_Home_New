@@ -10,7 +10,7 @@ export const metadata = {
     description: "eBitans provides Entrepreneurs an excellent solution to build sustainable stores online to sell their products online and also from physical stores.",
   };
 
-
+//sadas
 const featuresData = [
     {
         icon: images?.react,
