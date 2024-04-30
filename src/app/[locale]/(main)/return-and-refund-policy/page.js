@@ -21,12 +21,7 @@ const RefundPolicy = ({ params: { locale } }) => {
                     <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "রিটার্ন & রিফান্ড পলিসি" : "Return & Refund Policy"}</h1>
 
                 </div>
-            
-            
-            {/* <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
-                <h1 className='text-md sm:text-lg md:text-xl lg:text-4xl font-bold text-[#f1593a]'>{!bangla ? "eBitans" : "eBitans"}</h1>
-                <h1 className=' text-xl sm:text-2xl md:text-4xl lg:text-7xl font-bold text-white'>{!bangla ? "Return & Refund Policy" : "রিটার্ন & রিফান্ড পলিসি"}</h1>
-            </div> */}
+         
             <div className='container px-5 lg:px-10 pt-10 text-justify'>
                 <h3 className="text-3xl font-bold pt-8 pb-4">{!bangla ? "Trial Period" : "পরীক্ষামূলক ব্যবহারের সুযোগ"}</h3>
                 <p className=' text-m sm:text-lg md:text-xl lg:text-2xl'>{!bangla ? "eBitans offers a 30-day trial period for our services. During this time, customers have full access to our platform to experience its features and benefits. This trial period allows customers to make an informed decision about whether to subscribe to our services." : "eBitans-এ আমরা আমাদের সেবার জন্য ৩০ দিনের একটি পরীক্ষামূলক ব্যবহারের জন্য সময় প্রদান করি। এ সময়ের মধ্যে গ্রাহকরা আমাদের প্ল্যাটফর্মের কার্যকারিতা ও সুবিধাগুলি সম্পূর্ণরূপে অনুভব করতে এবং মূল্যায়ন করতে পারবেন। এই পরীক্ষামূলক সময়ের মধ্যে গ্রাহকদেরকে আমাদের সেবার সম্পর্কে এক্সেস বা বিনামূল্যে ব্যবহার করার সুবিধা দিয়ে থাকি।"}</p>
