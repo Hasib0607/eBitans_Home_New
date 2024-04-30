@@ -29,7 +29,6 @@ const Blogs = async ({ params: { locale } }) => {
                     <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
                     <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "Latest News & Updates"}</h1>
                     <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "Blogs"}</h1>
-
                 </div>
 
             {/* blog section  */}
