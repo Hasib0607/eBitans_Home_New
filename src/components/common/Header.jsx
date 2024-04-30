@@ -99,11 +99,11 @@ const Header = ({ locale }) => {
                     <div ref={navbarRef} className="hidden lg:block">
                         <div className={`flex items-center gap-x-7`}>
                             <ul className='relative flex items-center gap-x-7 group'>
-                                {/* <Link href={`/${locale}`} className="nav-link duration-300 ">
+                                <Link href={`/${locale}`} className="nav-link duration-300 ">
                                     <li onClick={() => { setOpenSub(false); setOpen(false) }} className={`${styles.archivo} ${(pathname === '/' || pathname === '/bn') ? 'active' : ''}`}>
                                         {locale === "en" ? "Home" : "হোম"}
                                     </li>
-                                </Link> */}
+                                </Link>
 
                                 <div className='relative'>
                                     <li onClick={() => { setOpenSub(!openSub); setOpen(false) }} className={`${styles.archivo} nav-link flex items-center gap-2 lg:cursor-pointer duration-300`}>
@@ -228,7 +228,7 @@ const Header = ({ locale }) => {
 
                     <div className='h-full w-full flex justify-center items-end pb-10'>
                         <div className='flex items-center gap-2'>
-                            <LanguageChanger locale={locale} />
+                            {/* <LanguageChanger locale={locale} /> */}
                             <a href="https://admin.ebitans.com/login">
                                 <button className={`group relative overflow-hidden rounded bg-[${ebitansColor}] w-[73px] h-[37px] shadow`}>
                                     <div className={`absolute inset-0 w-0 bg-[#000] transition-all duration-[250ms] ease-out group-hover:w-full`}></div>

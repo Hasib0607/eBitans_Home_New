@@ -42,7 +42,7 @@ const Theme = () => {
                     <div className='flex justify-between items-center pb-10 pt-16'>
                         <div className=''>
                             <p className={`${styles.archivo} ${styles.paragraph} tracking-[5px] lg:tracking-[10px] uppercase`}>The Ultimate Solution</p>
-                            <h2 className={`${styles.archivo} ${styles.headerTwo}`}>With Unlimited Theme</h2>
+                            <h2 className={`${styles.archivo} ${styles.headerTwo}`}>With Unlimited Themes</h2>
                         </div>
                         <Link href='/solutions/all-theme'>
                             <div className='group relative h-[27px] lg:h-[45px] w-[75px] lg:w-[123px] border-[1.5px] border-[#f1593a] rounded flex justify-center items-center gap-3 bg-white text-[#f1593a] '>

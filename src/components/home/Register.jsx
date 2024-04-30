@@ -31,7 +31,7 @@ const Register = () => {
             <div className='relative z-[1] container px-5 lg:px-10 rounded-[10px] xl:-mt-24 lg:-mt-10 -mt-6'>
                 <div className='text-center'>
                     {/* <p className={`${styles.archivo} ${styles.paragraph} tracking-[5px] lg:tracking-[10px] text-base uppercase`}>People who believe</p> */}
-                    <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Get started absolutely FREE</h2>
+                    <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Start Selling Today</h2>
                     <h4 className={`${styles.archivo} text-[12px] lg:text-[22px] font-normal lg:font-medium`}>Build your e-commerce today. No credit card needed</h4>
                 </div>
                 <div className='lg:flex gap-1 lg:gap-10 w-full justify-center mt-12'>
