@@ -27,7 +27,7 @@ const Home = async ({ params: { locale } }) => {
       <Services />
       <RegisterMiddle />
       <Theme />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Pse />
       <Work />
       <Register />
