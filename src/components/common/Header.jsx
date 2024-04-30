@@ -152,7 +152,7 @@ const Header = ({ locale }) => {
 
 
                     <div className='hidden lg:flex items-center gap-2'>
-                        <LanguageChanger locale={locale} />
+                        {/* <LanguageChanger locale={locale} /> */}
                         <a href="https://admin.ebitans.com/login">
                             <button className={`group relative overflow-hidden rounded bg-[#F1593A] w-[73px] h-[37px] shadow`}>
                                 <div className={`absolute inset-0 w-0 bg-[#000] transition-all duration-[250ms] ease-out group-hover:w-full`}></div>
