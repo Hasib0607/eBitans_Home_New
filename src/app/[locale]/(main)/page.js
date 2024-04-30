@@ -18,9 +18,6 @@ export const metadata = {
 };
 
 
-//askdais its sadsdasssssd ssds
-
-
 const Home = async ({ params: { locale } }) => {
   return (
     <main className="">
@@ -33,7 +30,6 @@ const Home = async ({ params: { locale } }) => {
       <Testimonials />
       <Pse />
       <Work />
-
       <Register />
     </main>
   );

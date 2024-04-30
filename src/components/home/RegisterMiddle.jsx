@@ -25,8 +25,8 @@ const RegisterMiddle = () => {
                 <div className='relative z-[2] flex flex-col gap-y-10 lg:flex-row justify-around lg:px-10 lg:py-8 py-5'>
                     <div className=' lg:basis-3/4 text-center lg:text-left'>
                         <div className=''>
-                            <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Get started absolutely FREE</h2>
-                            <h4 className={`${styles.archivo} text-[12px] lg:text-[22px] font-normal lg:font-medium`}>Build your e-commerce today. No credit card needed</h4>
+                            <h2 className={`${styles.archivo} ${styles.headerTwo}`}>Start Selling Today</h2>
+                            <h4 className={`${styles.archivo} text-[12px] lg:text-[22px] font-normal lg:font-medium`}>Build your e-commerce now. No credit card needed</h4>
                         </div>
                         <form onSubmit={handleSubmit(handleRegister)}>
                             <div className='flex gap-2 w-full mt-10 lg:mt-[70px] px-4 lg:px-0'>

@@ -20,7 +20,7 @@ const EbitansLearning = () => {
                 </div>
                 <div className='text-center lg:-mt-20 relative z-[4] container px-5 lg:px-10'>
                     <div className={`${instructionStyles.bgAnimate} w-[345px] h-[345px] bg-[#F3BEB3] bg-opacity-50 blur-3xl rounded-full`}></div>
-                    <h1 className={`${styles.archivo} ${styles.headerOne} uppercase max-w-[893px] mx-auto`}>BUILD YOUR OWN ECOMMERCE WEBSITE IN A MINUTE</h1>
+                    <h1 className={`${styles.archivo} ${styles.headerOne} uppercase max-w-[893px] mx-auto`}>BUILD YOUR OWN ECOMMERCE WEBSITE IN 1 MINUTE</h1>
                     <h5 className={`${styles.archivo} ${styles.headerFive} font-normal py-10 max-w-[490px] mx-auto`}>Helping businesses go online and grow bigger with high-tech ecommerce website.</h5>
                 </div>
             </div>
