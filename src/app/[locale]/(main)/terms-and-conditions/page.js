@@ -17,7 +17,6 @@ const TermsAndConditions = async ({ params: { locale } }) => {
                     <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
                     <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "eBitans"}</h1>
                     <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "Terms & Conditions"}</h1>
-
                 </div>
             
             <div className='container px-5 lg:px-10 py-14 text-justify'>

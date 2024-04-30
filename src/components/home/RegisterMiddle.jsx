@@ -1,7 +1,8 @@
 "use client"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import Image from 'next/image';
+import banner from "@/assets/images/Phn.webp"
 import { useForm } from "react-hook-form";
 import { onSubmit } from "@/lib/registration";
 import styles from "@/components/home/home.module.css"
@@ -60,7 +61,7 @@ const RegisterMiddle = () => {
                         </form>
                     </div>
                     <div className='relative lg:basis-1/4 mx-auto hidden lg:block'>
-                        <Image src={images?.phoneEbitans} alt="ebitans image" className='lg:absolute left-0 -bottom-8 z-[1]' />
+                        <Image src={banner} alt="ebitans image" className='lg:absolute left-0 -bottom-8 z-[1]' />
                     </div>
                 </div>
             </div>
