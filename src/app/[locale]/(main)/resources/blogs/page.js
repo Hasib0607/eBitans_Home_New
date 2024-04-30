@@ -1,7 +1,9 @@
+import Image from 'next/image';
+import banner from "@/assets/images/webBanner/blog.webp"
+import styles from "@/components/home/home.module.css"
 import { fetchBlogData, fetchBlogPopularData, fetchBlogTypeData } from '@/helper/api'
 import SingleBlog from '@/components/blogs/SingleBlog'
 import PopularBlog from '@/components/blogs/PopularBlog'
-import Image from 'next/image'
 import { Suspense } from 'react'
 import images from '@/lib/images'
 import BlogType from '@/components/blogs/BlogType'
@@ -14,17 +16,21 @@ export const metadata = {
   };
 
 
-const Blogs = async () => {
+const Blogs = async ({ params: { locale } }) => {
 
     const blogData = (await fetchBlogData()) ?? []
     const blogPopularData = (await fetchBlogPopularData()) ?? []
     const blogTypeData = (await fetchBlogTypeData()) ?? []
+    const bangla = locale !== "en"
 
     return (
-        <div className="sm:pt-[85px] pt-[50px] relative z-[1]">
-            <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar4.png')] bg-no-repeat">
-                <h1 className='text-4xl font-bold my-1 text-center text-[#f1593a]'>Blogs</h1>
-            </div>
+        <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
+               <div className="relative flex justify-center items-center">
+                    <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "Latest News & Updates"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "Blogs"}</h1>
+
+                </div>
 
             {/* blog section  */}
             <div className='container px-5 lg:px-10 my-10'>

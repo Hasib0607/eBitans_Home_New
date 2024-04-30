@@ -1,3 +1,8 @@
+import Image from 'next/image';
+import banner from "@/assets/images/webBanner/Privacy Policy.webp"
+import styles from "@/components/home/home.module.css"
+
+
 
 export const metadata = {
     title: "Privacy Policy",
@@ -8,11 +13,19 @@ export const metadata = {
 const Privacy = async ({ params: { locale } }) => {
     const bangla = locale !== "en"
     return (
-        <div className='relative z-[1] bg-[#F9F7F6] lg:pt-[85px] pt-[50px]'>
-            <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
+        <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
+               <div className="relative flex justify-center items-center">
+                    <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans" : "eBitans"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "প্রাইভেসী পলিসি" : "Privacy Policy"}</h1>
+
+                </div> 
+
+
+            {/* <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
             <h1 className='text-md sm:text-lg md:text-xl lg:text-4xl font-bold text-[#f1593a]'>{bangla ? "eBitans" : "eBitans"}</h1>
                 <h1 className=' text-xl sm:text-2xl md:text-4xl lg:text-7xl font-bold text-white'>{bangla ? "প্রাইভেসী পলিসি" : "Privacy Policy"}</h1>
-            </div>
+            </div> */}
             <div className='container px-5 lg:px-10 py-14 text-justify'>
 
                 <div>

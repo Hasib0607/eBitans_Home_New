@@ -1,3 +1,7 @@
+import Image from "next/image"
+import banner from "@/assets/images/webBanner/terms-and-conditions.webp"
+import styles from "@/components/home/home.module.css"
+
 
 export const metadata = {
     title: "Terms and Conditions",
@@ -8,14 +12,14 @@ export const metadata = {
 const TermsAndConditions = async ({ params: { locale } }) => {
     const bangla = locale !== "en"
     return (
-        <div className='lg:pt-[85px] pt-[50px] relative z-[1]'>
+        <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
+               <div className="relative flex justify-center items-center">
+                    <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "eBitans"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "Terms & Conditions"}</h1>
 
-            <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
-
-                <h1 className='text-md sm:text-lg md:text-xl lg:text-4xl font-bold text-[#f1593a]'>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "eBitans"}</h1>
-                <h1 className=' text-xl sm:text-2xl md:text-4xl lg:text-7xl font-bold text-white'>{bangla ? "টার্মস এবং কন্ডিশনস" : "Terms & Conditions"}</h1>
-
-            </div>
+                </div>
+            
             <div className='container px-5 lg:px-10 py-14 text-justify'>
                 <p>
                     {!bangla ? `In these Terms and conditions the term “we”, “our”, “us”, and “eBitans” refers to eBitans, a registered company based in Dhaka Bangladesh. The term “Platform”, “Site”, and “Website” refers to the eBitans e-commerce platform, an intellectual property owned by eBitans, the official website, and all other websites related to this platform.

@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import banner from "@/assets/images/webBanner/theme.webp"
+import styles from "@/components/home/home.module.css"
 import { Suspense } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { fetchThemeData } from '@/helper/api';
@@ -13,18 +15,18 @@ export const metadata = {
 };
 
 
-const AllTheme = async () => {
-
+const AllTheme = async ({ params: { locale } }) => {
+    const bangla = locale !== "en"
     const data = (await fetchThemeData()) ?? []
 
     return (
-        <div className='relative z-[1] lg:pt-[85px] pt-[50px]'>
-            <div className="sm:h-[40vh] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/4.png')] bg-no-repeat ">
-                <div className="">
-                    <h1 className='text-2xl sm:text-4xl font-bold my-1 text-center text-[#393b39]'>All Theme</h1>
-                    <h1 className='text-2xl font-thin sm:font-bold sm:text-4xl md:text-5xl lg:text-7xl my-1 text-center text-white'>Explore What We Offer</h1>
+            <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
+               <div className="relative flex justify-center items-center">
+                    <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "THE ULTIMATE SOLUTION"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "With Unlimited Themes"}</h1>
+
                 </div>
-            </div>
 
             <div className='container px-5 lg:px-10 my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  sm:gap-x-10 sm:gap-y-10 gap-4'>
                 <Suspense fallback={<div><Loading /></div>}>

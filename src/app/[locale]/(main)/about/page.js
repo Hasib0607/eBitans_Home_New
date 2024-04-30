@@ -1,3 +1,5 @@
+import banner from "@/assets/images/webBanner/about.webp"
+import styles from "@/components/home/home.module.css"
 import { BsInstagram } from 'react-icons/bs';
 import { RiFacebookBoxLine, RiLinkedinBoxLine } from 'react-icons/ri';
 import images from '@/lib/images';
@@ -110,12 +112,18 @@ const team = [
 const About = ({ params: { locale } }) => {
     const bangla = locale !== "en"
     return (
-        <div className="sm:pt-[85px] pt-[50px] relative z-[1]">
 
-            <div className="sm:h-[] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
+            <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
+               <div className="relative flex justify-center items-center">
+                    <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "Who We Are"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "Know More About Us"}</h1>
+
+                </div>
+            {/* <div className="sm:h-[] h-[15vh] bg-center bg-[length:100%_100%] flex flex-col gap-4 items-center justify-center bg-[url('https://ebitans.com/Image/cover/eBitans-Web-Bannar1.png')] bg-no-repeat ">
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-4xl font-bold text-[#f1593a]'>Who We Are</h1>
                 <h1 className=' text-xl sm:text-2xl md:text-4xl lg:text-7xl font-bold text-white'>Know More About eBitans</h1>
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 container px-5 lg:px-10">
                 <div className='pt-16 gap-y-10'>
