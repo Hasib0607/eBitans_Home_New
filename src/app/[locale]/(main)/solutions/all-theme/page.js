@@ -1,5 +1,9 @@
 import Image from 'next/image';
+<<<<<<< HEAD
 import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Theme.webp"
+=======
+import banner from "@/assets/images/webBanner/Theme.webp"
+>>>>>>> 82e5faa8c5b780c71fa618fec8cc05c2e165ad53
 import styles from "@/components/home/home.module.css"
 import { Suspense } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";

@@ -1,5 +1,9 @@
 import Image from 'next/image';
+<<<<<<< HEAD
 import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Service .webp"
+=======
+import banner from "@/assets/images/webBanner/About.webp"
+>>>>>>> 82e5faa8c5b780c71fa618fec8cc05c2e165ad53
 import styles from "@/components/home/home.module.css"
 import Free from "@/components/about/Free";
 import Registration from "@/components/pricing/Registration";
