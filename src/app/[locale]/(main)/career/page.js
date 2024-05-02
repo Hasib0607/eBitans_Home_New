@@ -1,5 +1,5 @@
 import Image from "next/image"
-import banner from "@/assets/images/career.png"
+import banner from "@/assets/images/ebitans - eCommerce website builder platform - Career.webp"
 import light from "@/assets/images/light.png"
 import dollar from "@/assets/images/dollar.png"
 import achievement from "@/assets/images/achievement.png"

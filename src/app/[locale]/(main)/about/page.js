@@ -1,4 +1,4 @@
-import banner from "@/assets/images/webBanner/about.webp"
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - About.webp"
 import styles from "@/components/home/home.module.css"
 import { BsInstagram } from 'react-icons/bs';
 import { RiFacebookBoxLine, RiLinkedinBoxLine } from 'react-icons/ri';

@@ -17,7 +17,7 @@ export const metadata = {
     default: "eBitans - E-Commerce Website Builder in Bangladesh",
     template: "%s | eBitans"
   },
-  keywords: ['e-commerce', 'website', 'ebitans'],
+  keywords: ['e-commerce', 'website', 'ebitans', 'ecommerce builder in bd', 'ecommerce builder in bangladesh', 'top ecommerce builder in bangladesh', 'ecommerce site builder in bangladesh', 'best ecommerce builder in bangladesh', 'top ecommerce site builder in bangladesh', 'ecommerce website builder in bangladesh', 'ecommerce website builder', 'top ecommerce website builder'],
   description: "Looking to launch your online store in Bangladesh? Discover top E-commerce website builder customized for the Bangladeshi market. Create a personalized, user-friendly E-commerce to showcase your products and grow your business online now.",
   twitter: {
     card: "summary_large_image"

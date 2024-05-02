@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from "@/assets/images/webBanner/blog.webp"
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Blog.webp"
 import styles from "@/components/home/home.module.css"
 import { fetchBlogData, fetchBlogPopularData, fetchBlogTypeData } from '@/helper/api'
 import SingleBlog from '@/components/blogs/SingleBlog'

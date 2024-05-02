@@ -1,5 +1,5 @@
 import Image from "next/image"
-import banner from "@/assets/images/webBanner/terms-and-conditions.webp"
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - terms and conditions.webp"
 import styles from "@/components/home/home.module.css"
 
 

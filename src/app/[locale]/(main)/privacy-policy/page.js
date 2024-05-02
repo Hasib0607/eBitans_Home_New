@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from "@/assets/images/webBanner/Privacy Policy.webp"
+import banner from "@/assets/images/webBanner/ebitans - ebitans - eCommerce website builder platform - Refund Policy.webp"
 import styles from "@/components/home/home.module.css"
 
 

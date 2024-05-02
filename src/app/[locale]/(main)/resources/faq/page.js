@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from "@/assets/images/webBanner/faq.webp"
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - FAQ.webp"
 import styles from "@/components/home/home.module.css"
 import FaqContent from '@/components/faq/FaqContent';
 import Registration from '@/components/pricing/Registration';
