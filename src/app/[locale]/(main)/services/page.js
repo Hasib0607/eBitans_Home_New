@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from "@/assets/images/webBanner/about.webp"
+import banner from "@/assets/images/webBanner/About.webp"
 import styles from "@/components/home/home.module.css"
 import Free from "@/components/about/Free";
 import Registration from "@/components/pricing/Registration";
