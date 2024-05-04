@@ -13,6 +13,15 @@ import i18nConfig from "../../../i18nConfig";
 const archivo = Archivo({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
+  verification: {
+    google: 'google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['my-email', 'my-link'],
+    },
+  },
+
   title: {
     default: "eBitans - E-Commerce Website Builder in Bangladesh",
     template: "%s | eBitans"
@@ -39,7 +48,7 @@ export default async function RootLayout({ children, params: { locale } }) {
     <html lang={locale} dir={dir(locale)}>
       <AOSInit />
       <head>
-      google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM
+        <meta name="google-site-verification" content="google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM"/>
       </head>
 
       <body className={archivo.className}>
