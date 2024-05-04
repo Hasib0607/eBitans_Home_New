@@ -38,6 +38,10 @@ export default async function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={dir(locale)}>
       <AOSInit />
+      <head>
+      google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM
+      </head>
+
       <body className={archivo.className}>
         <ScrollToTop />
         <div className='absolute top-0 left-0 bottom-0 h-full w-full lg:grid grid-cols-6 divide-x hidden'>
