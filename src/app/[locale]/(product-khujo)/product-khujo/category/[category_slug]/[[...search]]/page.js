@@ -4,8 +4,8 @@ import ScrollToTop from "@/lib/ScrollToTop"
 
 export async function generateMetadata({ params }) {
 
-  const categorySlugs = category.filter(item => item.id === 28620 || item.id === 28621 || item.id === 28628 || item.id === 28621).map(item => item.slug);
-        const category = category.filter(item => item.id === 28619 || item.id === 28622).map(item => item.slug);
+  const category = (await fetchPseCategory()) ?? []
+  const cat = category.find(item => item?.slug === params?.category_slug)
   
   return {
       title: `${cat?.name} | Product খুঁজো`,

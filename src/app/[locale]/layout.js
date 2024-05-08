@@ -9,8 +9,12 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { dir } from "i18next";
 import i18nConfig from "../../../i18nConfig";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const archivo = Archivo({ subsets: ["latin"], display: 'swap' });
+
+
+
 
 export const metadata = {
   verification: {
@@ -41,14 +45,12 @@ export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
 }
 
+
 export default async function RootLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale} dir={dir(locale)}>
       <AOSInit />
-      <head>
-        <meta name="google-site-verification" content="google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM"/>
-      </head>
 
       <body className={archivo.className}>
         <ScrollToTop />
@@ -68,6 +70,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           </ThemeProvider>
         </ThemeContextProvider>
       </body>
+      <GoogleAnalytics gaId="G-R1P19DNPR8" />
     </html>
   );
 }
