@@ -18,7 +18,6 @@ const archivo = Archivo({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
   
-
   title: {
     default: "eBitans - E-Commerce Website Builder in Bangladesh",
     template: "%s | eBitans"
