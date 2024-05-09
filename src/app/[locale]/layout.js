@@ -17,13 +17,7 @@ const archivo = Archivo({ subsets: ["latin"], display: 'swap' });
 
 
 export const metadata = {
-  verification: {
-    google: "google-site-verification=Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM",
-
-    other: {
-      me: ['my-email', 'my-link'],
-    },
-  },
+  
 
   title: {
     default: "eBitans - E-Commerce Website Builder in Bangladesh",
@@ -71,6 +65,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         </ThemeContextProvider>
       </body>
       <GoogleAnalytics gaId="G-R1P19DNPR8" />
+      <meta name="google-site-verification" content="Xs0AWKWY2yKdJjyWwwxt61arffxOHxDvaYBi2e3uKRM" />
     </html>
   );
 }
