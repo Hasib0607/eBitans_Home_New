@@ -23,8 +23,8 @@ const AllTheme = async ({ params: { locale } }) => {
             <div className='container px-5 lg:px-10 sm:pt-[100px] pt-[65px] relative z-[1]'>
                <div className="relative flex justify-center items-center">
                     <Image width={500} height={500} src={banner} alt="career image" className="w-full h-auto rounded-lg border-white border-2" />
-                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "THE ULTIMATE SOLUTION"}</h1>
-                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "With Unlimited Themes"}</h1>
+                    <h1 className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[10px] sm:tracking-[15px] text-sm lg:text-2xl  sm:text-4xl mt-[-120px] pt-14 px-4`}>{bangla ? "eBitans সম্পর্কে কিছু কথা" : "THE ULTIMATE SOLUTION"}</h1>
+                    <h1 className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[10px] sm:tracking-[15px] text-sm sm:text-2xl lg:text-6xl pt-6 px-4`}>{bangla ? "টার্মস এবং কন্ডিশনস" : "With Unlimited Themes"}</h1>
                 </div>
 
             <div className='container px-5 lg:px-10 my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  sm:gap-x-10 sm:gap-y-10 gap-4'>
