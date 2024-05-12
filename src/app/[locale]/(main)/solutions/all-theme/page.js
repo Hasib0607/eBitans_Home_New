@@ -125,7 +125,7 @@ const Template = ({ item }) => {
                 href={item?.liveurl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#fff] text-[#f1593a] font-semibold text-center rounded-md py-2 drop-shadow-lg shadow-md hover:text-[#fff] border-[#f1593a] hover:border-[#f1593a] hover:bg-[#f1593a] border-2 outline-0 duration-500 px-6 text-nowrap"
+                className="bg-[#fff] text-[#f1593a] font-semibold text-center rounded-md py-2 drop-shadow-lg shadow-md hover:text-[#fff] border-[#f1593a] hover:border-[#f1593a] hover:bg-[#f1593a] border-2 outline-0 duration-500 px-4 text-nowrap"
               >
                 View Demo
               </a>
