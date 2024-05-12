@@ -11,14 +11,10 @@ import Register from "@/components/home/Register";
 import RegisterMiddle from "@/components/home/RegisterMiddle";
 
 export const metadata = {
-
   title: {
-    absolute: "eBitans | Most Popular E-Commerce Website Builder in Bangladesh"
+    absolute: "eBitans | Most Popular E-Commerce Website Builder in Bangladesh",
   },
-  
-
 };
-
 
 const Home = async ({ params: { locale } }) => {
   return (
@@ -35,6 +31,6 @@ const Home = async ({ params: { locale } }) => {
       <Register />
     </main>
   );
-}
+};
 
-export default Home
+export default Home;
