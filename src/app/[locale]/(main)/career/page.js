@@ -1,13 +1,13 @@
-import Image from "next/image"
-import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Career.webp"
-import light from "@/assets/images/light.png"
-import dollar from "@/assets/images/dollar.png"
-import achievement from "@/assets/images/achievement.png"
-import handshake from "@/assets/images/handshake.png"
-import grow from "@/assets/images/grow.png"
-import styles from "@/components/home/home.module.css"
-import images from "@/lib/images"
-import Registration from "@/components/pricing/Registration"
+import Image from "next/image";
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Career.webp";
+import light from "@/assets/images/light.png";
+import dollar from "@/assets/images/dollar.png";
+import achievement from "@/assets/images/achievement.png";
+import handshake from "@/assets/images/handshake.png";
+import grow from "@/assets/images/grow.png";
+import styles from "@/components/home/home.module.css";
+import images from "@/lib/images";
+import Registration from "@/components/pricing/Registration";
 
 export const metadata = {
   title: "Career",
