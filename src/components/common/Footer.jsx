@@ -1,11 +1,44 @@
-// "use client"
-import Image from "next/image"
-import Link from "next/link"
-import images from "@/lib/images"
-import styles from "@/components/home/home.module.css"
+"use client";
+import { useEffect } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import images from "@/lib/images";
+import styles from "@/components/home/home.module.css";
 
 const Footer = ({ locale }) => {
     let date = new Date().getFullYear();
+
+    useEffect(() => {
+        // Add Elfsight script for what's app
+        const elfsightScript = document.createElement('script');
+        elfsightScript.src = 'https://static.elfsight.com/platform/platform.js';
+        elfsightScript.setAttribute('data-use-service-core', '');
+        elfsightScript.defer = true;
+        document.body.appendChild(elfsightScript);
+
+        // Add Facebook Messenger SDK
+        const fbScript = document.createElement('script');
+        fbScript.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fbScript.async = true;
+        fbScript.defer = true;
+        document.body.appendChild(fbScript);
+
+        fbScript.onload = () => {
+            if (window.FB) {
+                window.FB.init({
+                    xfbml: true,
+                    version: 'v12.0',
+                });
+            }
+        };
+
+        // Clean up scripts on unmount
+        return () => {
+            document.body.removeChild(elfsightScript);
+            document.body.removeChild(fbScript);
+        };
+    }, []);
+
     return (
         <footer className='bg-[#261612] pt-16 relative z-[1]'>
             <div className='grid grid-cols-12 gap-5 container px-5 lg:px-10'>
@@ -62,19 +95,23 @@ const Footer = ({ locale }) => {
                         <Image src={images?.location} alt="ebitans image" />
                         <p className={`${styles.archivo} ${styles.paragraph}`}>4th Floor, House: 39, Road: 20, <br /> Nikunja 2, Dhaka-1229</p>
                     </div>
+
+                    <div className="elfsight-app-d5564ed2-4616-4bb4-908f-13e6b4d69ac7" data-elfsight-app-lazy></div>
                 </div>
-            </div >
+            </div>
             <div className='relative bg-[#000] py-3 mt-10 z-[1]'>
-                < div className='grid grid-cols-1 justify-start pl-4'>
+                <div className='grid grid-cols-1 justify-start pl-4'>
                     <span className="text-sm text-[#f1593a] sm:text-center">© {date} All Rights Reserved | Design & Developed By <a href="https://ebitans.com" className='font-bold'>eBitans Ltd. |</a> <a>Made In BANGLADESH</a> </span>
                 </div>
             </div>
-        </footer >
-    )
-}
+            {/* Facebook Messenger Chat Plugin */}
+            <div id="fb-root"></div>
+            <div className="fb-customerchat" attribution="setup_tool" page_id="104694832190312" app_id="399283462300859"></div>
+        </footer>
+    );
+};
 
-export default Footer
-
+export default Footer;
 
 const socialLink = [
     {
@@ -102,9 +139,7 @@ const socialLink = [
         url: 'https://www.facebook.com/groups/3028406117411540',
         icon: images?.fbGroup
     }
-]
-
-
+];
 
 const footerPage = [
     {
@@ -116,7 +151,7 @@ const footerPage = [
     {
         id: 2,
         name: 'About',
-        nameBn: 'আমাদের পরিচয়',
+        nameBn: 'আমাদের পরিচয়',
         url: "/about"
     },
     {
@@ -143,7 +178,7 @@ const footerPage = [
         nameBn: 'যোগাযোগ করুন',
         url: "/contact"
     },
-]
+];
 
 const legal = [
     {
@@ -173,7 +208,7 @@ const legal = [
     {
         id: 6,
         name: 'Affiliate Program',
-        nameBn: "এফিলিয়েট প্রোগ্রাম",
+        nameBn: "এফিলিয়েট প্রোগ্রাম",
         url: "/affiliate-program"
     },
     {
@@ -185,8 +220,7 @@ const legal = [
     {
         id: 8,
         name: 'Career',
-        nameBn: "ক্যারিয়ার",
+        nameBn: "ক্যারিয়ার",
         url: "/career"
     },
-
-]
+];
