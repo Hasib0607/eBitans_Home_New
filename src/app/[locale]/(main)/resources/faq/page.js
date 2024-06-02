@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - FAQ.webp"
-import styles from "@/components/home/home.module.css"
-import FaqContent from '@/components/faq/FaqContent';
-import Registration from '@/components/pricing/Registration';
+import Image from "next/image";
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - FAQ.webp";
+import styles from "@/components/home/home.module.css";
+import FaqContent from "@/components/faq/FaqContent";
+import Registration from "@/components/pricing/Registration";
 
 export const metadata = {
   title: "FAQ",
@@ -25,12 +25,12 @@ const Faq = ({ params: { locale } }) => {
             className="w-full h-auto rounded-lg border-white border-2"
           />
           <h1
-            className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}
+            className={`${styles.archivo} absolute z-[1] text-gray-800 md:tracking-[15px] tracking-widest text-xl lg:text-4xl md:mt-[-120px] mt-[-40px] font-bold`}
           >
             {bangla ? "eBitans সম্পর্কে কিছু কথা" : "Full Fill Your Curiosity"}
           </h1>
           <h1
-            className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}
+            className={` ${styles.wordSpacingOne} ${styles.archivo} mt-9 font-light   absolute z-[1] text-gray-200 md:font-bold md:tracking-[15px] tracking-widest  text-2xl lg:text-6xl`}
           >
             {bangla ? "টার্মস এবং কন্ডিশনস" : "FAQ"}
           </h1>

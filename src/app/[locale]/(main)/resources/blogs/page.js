@@ -1,14 +1,18 @@
-import Image from 'next/image';
-import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Blog.webp"
-import styles from "@/components/home/home.module.css"
-import { fetchBlogData, fetchBlogPopularData, fetchBlogTypeData } from '@/helper/api'
-import SingleBlog from '@/components/blogs/SingleBlog'
-import PopularBlog from '@/components/blogs/PopularBlog'
-import { Suspense } from 'react'
-import images from '@/lib/images'
-import BlogType from '@/components/blogs/BlogType'
-import AllBlog from '@/components/blogs/AllBlog'
-import Loading from '@/app/[locale]/loading'
+import Image from "next/image";
+import banner from "@/assets/images/webBanner/ebitans - eCommerce website builder platform - Blog.webp";
+import styles from "@/components/home/home.module.css";
+import {
+  fetchBlogData,
+  fetchBlogPopularData,
+  fetchBlogTypeData,
+} from "@/helper/api";
+import SingleBlog from "@/components/blogs/SingleBlog";
+import PopularBlog from "@/components/blogs/PopularBlog";
+import { Suspense } from "react";
+import images from "@/lib/images";
+import BlogType from "@/components/blogs/BlogType";
+import AllBlog from "@/components/blogs/AllBlog";
+import Loading from "@/app/[locale]/loading";
 
 export const metadata = {
   title: "Blogs",
@@ -33,12 +37,12 @@ const Blogs = async ({ params: { locale } }) => {
           className="w-full h-auto rounded-lg border-white border-2"
         />
         <h1
-          className={`${styles.archivo} absolute z-[1] text-gray-800 tracking-[15px] text-xl lg:text-4xl mt-[-120px]`}
+          className={`${styles.archivo} absolute z-[1] text-gray-800 md:tracking-[15px] tracking-widest text-xl lg:text-4xl md:mt-[-120px] mt-[-40px] font-bold`}
         >
           {bangla ? "eBitans সম্পর্কে কিছু কথা" : "Latest News & Updates"}
         </h1>
         <h1
-          className={` ${styles.archivo} absolute z-[1] text-gray-200 font-bold tracking-[15px] text-2xl lg:text-6xl`}
+          className={` ${styles.wordSpacingOne} ${styles.archivo} mt-9 font-light   absolute z-[1] text-gray-200 md:font-bold md:tracking-[15px] tracking-widest  text-2xl lg:text-6xl`}
         >
           {bangla ? "টার্মস এবং কন্ডিশনস" : "Blogs"}
         </h1>
