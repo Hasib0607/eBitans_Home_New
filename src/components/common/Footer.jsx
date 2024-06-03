@@ -9,27 +9,24 @@ const Footer = ({ locale }) => {
     let date = new Date().getFullYear();
 
     useEffect(() => {
-        // Add Elfsight script for what's app
+        // Add Elfsight script
         const elfsightScript = document.createElement('script');
         elfsightScript.src = 'https://static.elfsight.com/platform/platform.js';
         elfsightScript.setAttribute('data-use-service-core', '');
         elfsightScript.defer = true;
         document.body.appendChild(elfsightScript);
 
-        // Add Facebook Messenger SDK
+        // Add Facebook Messenger script
         const fbScript = document.createElement('script');
+        fbScript.id = 'facebook-jssdk';
         fbScript.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fbScript.async = true;
-        fbScript.defer = true;
         document.body.appendChild(fbScript);
 
-        fbScript.onload = () => {
-            if (window.FB) {
-                window.FB.init({
-                    xfbml: true,
-                    version: 'v12.0',
-                });
-            }
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v11.0' // Replace with desired API version
+            });
         };
 
         // Clean up scripts on unmount
@@ -106,7 +103,12 @@ const Footer = ({ locale }) => {
             </div>
             {/* Facebook Messenger Chat Plugin */}
             <div id="fb-root"></div>
-            <div className="fb-customerchat" attribution="setup_tool" page_id="104694832190312" app_id="399283462300859"></div>
+            <div id="fb-customer-chat" className="fb-customerchat"></div>
+            <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "104694832190312");
+                chatbox.setAttribute("attribution", "biz_inbox");
+            </script>
         </footer>
     );
 };
